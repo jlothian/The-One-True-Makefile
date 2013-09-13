@@ -45,12 +45,12 @@ ETC_INSTALL_LIST += $(foo_etcs)
 INCLUDE_INSTALL_LIST +=$(foo_includes)
 LIB_INSTALL_LIST +=$(foo_libs)
 SHARE_INSTALL_LIST += $(foo_shares)
+CPPFLAGS += $(foo_cppflags)
 
 ##########################################################
 # Dependencies and rules:
 ##########################################################
 
-$(foo_deps): CPPFLAGS += $(foo_cppflags)
 $(foo_deps): foo/module.mk
 
 $(foo_obj): CPPFLAGS += $(foo_cppflags)
